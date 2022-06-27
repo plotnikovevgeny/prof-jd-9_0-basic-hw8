@@ -1,6 +1,3 @@
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
-
 import java.time.LocalDate;
 
 public class Main {
@@ -10,7 +7,7 @@ public class Main {
         System.out.println(leapYearDefinition(year));
 
         //задание два
-        selectionOS("Android",2021);
+        selectionOS("Android", 2021);
 
         // задание три
         getNumberOfDaysForDelivery(99);
@@ -30,18 +27,18 @@ public class Main {
         int currentYear = LocalDate.now().getYear();
         if (currentYear > year) {
             System.out.println("Установите облегченную версию приложения для " + osName + " по ссылке");
-        }else
+        } else
             System.out.println("Установите версию приложения для " + osName + " по ссылке");
     }
 
     // задание три
-    public static void getNumberOfDaysForDelivery(int deliveryDistance){
+    public static void getNumberOfDaysForDelivery(int deliveryDistance) {
         int deliveryDays = 0;
         if (deliveryDistance < 20) deliveryDays = 1;
         if (deliveryDistance < 60 && deliveryDistance >= 20) deliveryDays = 2;
         if (deliveryDistance >= 60 && deliveryDistance < 100) deliveryDays = 3;
         String answer = "Потребуется дней: " + deliveryDays;
-        if (deliveryDistance >=100)
+        if (deliveryDistance >= 100)
             answer = "Это слишком далеко";
         System.out.println(answer);
     }
